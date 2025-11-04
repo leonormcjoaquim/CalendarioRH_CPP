@@ -16,12 +16,22 @@ Para a UC 00607 o Professor solicitou a realização de um mini sistema RH que e
 
 ## Validações do Programa:
 1. Cálculo de ano Bissexto:
-   <pre> bool anoBissexto(int ano){
-    return (ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0);} </pre>
+   <pre> bool isAnoBissexto(int ano){
+    if (ano % 400 == 0)
+        return true;
+
+    if (ano % 100 == 0)
+        return false;
+
+    if (ano % 4 == 0)
+        return true;
+
+    return false;
+} </pre>
     - Se for multiplo de 4 é Bissexto. Mas se for multiplo de 4 e 100, já não é bissexto. No entanto, se for multiplo de 400 é bissexto.
 
 2. Proibição de marcar faltas/férias ao fim de semana
-   <pre>if (fimDeSemana(d, m, a))
+   <pre>if (fimDeSemana(dia, mes, ano))
         return; </pre>
 
 3. Evita nomes iguais 

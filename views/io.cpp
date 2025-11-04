@@ -20,13 +20,14 @@ std::string lerNomeColaborador()
 {
     std::string nome;
     std::cout << "Nome: ";
-    std::cin >> nome;
+    std::getline(std::cin >> std::ws, nome);
 
     for(char &c : nome)
-        c = std::tolower(c);
+        c = std::tolower(static_cast<unsigned char>(c));
 
     return nome;
 }
+
 
 
 // Pede o dia
