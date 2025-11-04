@@ -22,13 +22,11 @@ std::string lerNomeColaborador()
     std::cout << "Nome: ";
     std::getline(std::cin >> std::ws, nome);
 
-    for(char &c : nome)
+    for(char &c : nome) // guardar para minusculas. não pode haver nomes iguais
         c = std::tolower(static_cast<unsigned char>(c));
 
     return nome;
 }
-
-
 
 // Pede o dia
 int lerDia()
@@ -88,6 +86,8 @@ char obterMarcacao(const Colaborador &c, const std::string &data)
     return ' ';
 }
 
+// imprime o calendario do colaborador naquele mes e ano selecionado
+// e imprime com cores e as marcas consoante for ferias (F) faltas (X)
 void mostrarCalendario(const Colaborador &c, int mes, int ano)
 {
     std::cout << "\nCalendario de " << c.nome << "                  " << mes << "/" << ano << "\n\n";
