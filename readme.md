@@ -1,8 +1,8 @@
 ## Contexto
 Para a UC 00607 o Professor solicitou a realização de um mini sistema RH que envolvesse os seguintes conceitos:
-1. Vectores
+1. Memória alocada dinamicamente (escolhi utilizar Vetores)
 2. Leitura e escrita em Ficheiros, no caso escolhi CSV
-3. Utilizar cifras para guardar nomes encriptados
+3. Utilizar cifras para guardar nomes encriptados (utilizei a cifra de César)
 
 ## Objetivo do Programa:
 1. Adicionar Colaboradores;
